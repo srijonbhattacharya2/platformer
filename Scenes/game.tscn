@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ctpe344ks453u"]
+[gd_scene load_steps=21 format=3 uid="uid://ctpe344ks453u"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://dqb588w52r7b2" path="res://Assets/Pictures/Player.png" id="2_qxrlw"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cc4jl7qpfugn7" path="res://Assets/Pictures/3 Hearts.png" id="8_nnt18"]
 [ext_resource type="Script" uid="uid://ct8cc12gmbwhq" path="res://Scripts/2_of_3.gd" id="9_1phco"]
 [ext_resource type="Script" uid="uid://so7rt4ro0uye" path="res://Scenes/3_of_3.gd" id="11_nb51f"]
+[ext_resource type="Texture2D" uid="uid://ud5aa7xo040l" path="res://Assets/Pictures/Lava.png" id="16_nnt18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
@@ -212,5 +213,12 @@ texture = ExtResource("6_i6g32")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 1"]
 position = Vector2(867, 2410)
 shape = SubResource("RectangleShape2D_nb51f")
+
+[node name="Area2D" type="Area2D" parent="Kill Zone"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Area2D"]
+position = Vector2(1668.9999, 2564)
+scale = Vector2(0.334375, 0.17962962)
+texture = ExtResource("16_nnt18")
 
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
