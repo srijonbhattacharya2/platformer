@@ -1,9 +1,8 @@
-[gd_scene load_steps=38 format=3 uid="uid://ctpe344ks453u"]
+[gd_scene load_steps=23 format=3 uid="uid://ctpe344ks453u"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://dqb588w52r7b2" path="res://Assets/Pictures/Player.png" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://bprm5oc17ekn2" path="res://Scripts/Player.gd" id="2_wrm1d"]
-[ext_resource type="Script" uid="uid://c00kbuwgm41f2" path="res://Scenes/black.gd" id="3_vm72l"]
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="4_3dryh"]
 [ext_resource type="Texture2D" uid="uid://broo2gg4t24jg" path="res://Assets/Pictures/0 Hearts.png" id="4_rku1e"]
 [ext_resource type="Texture2D" uid="uid://d2bfudew2pxcy" path="res://Assets/Pictures/Ground.png" id="4_wowpa"]
@@ -15,29 +14,15 @@
 [ext_resource type="Script" uid="uid://d128bwp2qo7qc" path="res://Scripts/1_of_3.gd" id="7_rfjv2"]
 [ext_resource type="Texture2D" uid="uid://cc4jl7qpfugn7" path="res://Assets/Pictures/3 Hearts.png" id="8_nnt18"]
 [ext_resource type="Script" uid="uid://ct8cc12gmbwhq" path="res://Scripts/2_of_3.gd" id="9_1phco"]
-[ext_resource type="Texture2D" uid="uid://bq2g5nia1e37k" path="res://Assets/Pictures/Player Deep Blue.png" id="11_7t8sx"]
-[ext_resource type="Script" uid="uid://so7rt4ro0uye" path="res://Scripts/3_of_3.gd" id="11_nb51f"]
-[ext_resource type="Texture2D" uid="uid://cy3wl6pei8jok" path="res://Assets/Pictures/Player Red.png" id="12_mg4q0"]
-[ext_resource type="Script" uid="uid://rjljfbnv7mdn" path="res://Scenes/blue.gd" id="13_22asu"]
-[ext_resource type="Script" uid="uid://banmbmkff63xh" path="res://Scenes/red.gd" id="15_fkdbe"]
+[ext_resource type="Script" uid="uid://so7rt4ro0uye" path="res://Scenes/3_of_3.gd" id="11_nb51f"]
 [ext_resource type="Texture2D" uid="uid://ud5aa7xo040l" path="res://Assets/Pictures/Lava.png" id="16_nnt18"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="17_ewbju"]
-[ext_resource type="Texture2D" uid="uid://b7s55kc0d46j4" path="res://Assets/Pictures/Rotating spike.png" id="17_iivbl"]
-[ext_resource type="Script" uid="uid://tvkn7lsv2n25" path="res://Scripts/Rotating_Spike.gd" id="18_7nbq1"]
-[ext_resource type="Texture2D" uid="uid://cojohss1ox7sn" path="res://Assets/Pictures/Spike.png.png" id="18_exi56"]
-[ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="20_7nbq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewbju"]
-size = Vector2(4109.0117, 415.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iivbl"]
-size = Vector2(3197, 431)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkdbe"]
-size = Vector2(1065.5, 427)
+size = Vector2(8721.625, 415.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
 size = Vector2(101.5, 4245.5)
@@ -46,20 +31,7 @@ size = Vector2(101.5, 4245.5)
 size = Vector2(376, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnt18"]
-size = Vector2(642.5, 296)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
-radius = 182.06866
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
-size = Vector2(477, 148)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7t8sx"]
-radius = 91.0
-height = 422.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_exi56"]
-size = Vector2(1213, 197)
+size = Vector2(642.5, 197)
 
 [node name="Game" type="Node2D"]
 
@@ -67,14 +39,12 @@ size = Vector2(1213, 197)
 script = ExtResource("1_ebmjs")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-z_index = 5
 position = Vector2(1, 2192)
 script = ExtResource("2_wrm1d")
 
-[node name="Black" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 position = Vector2(635, 430)
 texture = ExtResource("2_qxrlw")
-script = ExtResource("3_vm72l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(191, 227.25)
@@ -109,18 +79,6 @@ script = ExtResource("9_1phco")
 [node name="3 of 3" type="Sprite2D" parent="Player/Health"]
 texture = ExtResource("8_nnt18")
 script = ExtResource("11_nb51f")
-
-[node name="Blue" type="Sprite2D" parent="Player"]
-position = Vector2(192, 227)
-scale = Vector2(0.33999997, 0.33999997)
-texture = ExtResource("11_7t8sx")
-script = ExtResource("13_22asu")
-
-[node name="Red" type="Sprite2D" parent="Player"]
-position = Vector2(190.99998, 227.00006)
-scale = Vector2(0.33450705, 0.33450702)
-texture = ExtResource("12_mg4q0")
-script = ExtResource("15_fkdbe")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(3, 519)
@@ -185,6 +143,11 @@ position = Vector2(3348.9849, 2168.94)
 scale = Vector2(0.3573905, 0.42761695)
 texture = ExtResource("4_wowpa")
 
+[node name="Sprite2D13" type="Sprite2D" parent="Ground"]
+position = Vector2(5990.9844, 2169.94)
+scale = Vector2(0.3437295, 0.4274584)
+texture = ExtResource("4_wowpa")
+
 [node name="Sprite2D14" type="Sprite2D" parent="Ground"]
 position = Vector2(6522.9854, 2168.94)
 scale = Vector2(0.3573905, 0.42761695)
@@ -216,9 +179,14 @@ scale = Vector2(1.0400013, 1.0400013)
 shape = SubResource("RectangleShape2D_ewbju")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
-position = Vector2(3590.3115, 2169)
+position = Vector2(6474.7485, 2169)
 scale = Vector2(1.0400013, 1.0400013)
 shape = SubResource("RectangleShape2D_ewbju")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Ground"]
+position = Vector2(9679.461, 2168.94)
+scale = Vector2(0.3573905, 0.42761695)
+texture = ExtResource("4_wowpa")
 
 [node name="Sprite2D20" type="Sprite2D" parent="Ground"]
 position = Vector2(8112.9844, 2169.94)
@@ -245,47 +213,38 @@ position = Vector2(9179.476, 2168.94)
 scale = Vector2(0.3573905, 0.42761695)
 texture = ExtResource("4_wowpa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
-position = Vector2(7854.5, 2161.5)
-shape = SubResource("RectangleShape2D_iivbl")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground"]
-position = Vector2(10473.25, 2169.5)
-shape = SubResource("RectangleShape2D_fkdbe")
-
 [node name="Boundary" type="Node2D" parent="."]
 
 [node name="Boundary" type="StaticBody2D" parent="Boundary"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/Boundary"]
-position = Vector2(-1245, 1299.25)
+position = Vector2(-1292.75, 1299.25)
 shape = SubResource("RectangleShape2D_wowpa")
 
 [node name="Sky" type="Node2D" parent="."]
-z_index = -5
 
 [node name="Sprite2D" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(213.50008, 603.99994)
-scale = Vector2(3.0322268, 3.0863538)
+scale = Vector2(3.0322268, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(3269.0002, 603.99994)
-scale = Vector2(-2.9782095, 3.0863538)
+scale = Vector2(-2.9782095, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(6304, 603.99994)
-scale = Vector2(2.9522235, 3.0863538)
+scale = Vector2(2.9522235, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(9262, 603.99994)
-scale = Vector2(-2.9677775, 3.0863538)
+scale = Vector2(-2.9677775, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Kill Zone" type="Node2D" parent="."]
@@ -310,7 +269,7 @@ scale = Vector2(0.334375, 0.28888884)
 texture = ExtResource("16_nnt18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava"]
-position = Vector2(1669.75, 2612)
+position = Vector2(1669.75, 2562.5)
 shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="Spike 2" type="Area2D" parent="Kill Zone"]
@@ -325,110 +284,11 @@ texture = ExtResource("6_i6g32")
 position = Vector2(867, 2410)
 shape = SubResource("RectangleShape2D_nb51f")
 
-[node name="Rotating spike" type="Area2D" parent="Kill Zone"]
-position = Vector2(-2156, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating spike"]
-position = Vector2(6433, 2450)
-shape = SubResource("CircleShape2D_iivbl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating spike"]
-z_index = -1
-position = Vector2(6433, 2467)
-texture = ExtResource("17_iivbl")
-script = ExtResource("18_7nbq1")
-
-[node name="Empty Area" type="Area2D" parent="Kill Zone"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Empty Area"]
-position = Vector2(5988.5, 2804)
-shape = SubResource("RectangleShape2D_7nbq1")
-
-[node name="Spike 3" type="Area2D" parent="Kill Zone"]
-position = Vector2(-72, -88)
-scale = Vector2(0.96, 0.96)
-
-[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 3"]
-position = Vector2(7375.5483, 2593.445)
-scale = Vector2(0.47333324, 0.47333324)
-texture = ExtResource("18_exi56")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 3"]
-position = Vector2(7380.548, 2601.445)
-scale = Vector2(0.28861785, 0.28861785)
-shape = SubResource("CapsuleShape2D_7t8sx")
-
-[node name="Spike 4" type="Area2D" parent="Kill Zone"]
-position = Vector2(623.99994, -88)
-scale = Vector2(0.96, 0.96)
-
-[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 4"]
-position = Vector2(7375.5483, 2593.445)
-scale = Vector2(0.47333324, 0.47333324)
-texture = ExtResource("18_exi56")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 4"]
-position = Vector2(7380.548, 2601.445)
-scale = Vector2(0.28861785, 0.28861785)
-shape = SubResource("CapsuleShape2D_7t8sx")
-
-[node name="Rotating spike2" type="Area2D" parent="Kill Zone"]
-position = Vector2(2542, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating spike2"]
-position = Vector2(6433, 2450)
-shape = SubResource("CircleShape2D_iivbl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating spike2"]
-z_index = -1
-position = Vector2(6433, 2467)
-texture = ExtResource("17_iivbl")
-script = ExtResource("18_7nbq1")
-
-[node name="Empty Area2" type="Area2D" parent="Kill Zone"]
-position = Vector2(3706, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Empty Area2"]
-position = Vector2(5988.5, 2804)
-shape = SubResource("RectangleShape2D_7nbq1")
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_ewbju")
 volume_db = 4.622
 autoplay = true
 
-[node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(6285.0005, 2103)
-rotation = -0.167101
-scale = Vector2(0.27999026, 0.27999026)
-
-[node name="Sprite2D" type="Sprite2D" parent="Platform"]
-texture = ExtResource("20_7nbq1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(-0.5, 45.5)
-shape = SubResource("RectangleShape2D_exi56")
-one_way_collision = true
-
-[node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(8239, 2135)
-rotation = -0.056034826
-scale = Vector2(0.27999026, 0.27999026)
-
-[node name="Sprite2D" type="Sprite2D" parent="Platform2"]
-texture = ExtResource("20_7nbq1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-position = Vector2(-0.5, 45.5)
-shape = SubResource("RectangleShape2D_exi56")
-one_way_collision = true
-
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Rotating spike" to="Kill Zone" method="_on_rotating_spike_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Empty Area" to="Kill Zone" method="_on_empty_area_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Spike 3" to="Kill Zone" method="_on_spike_3_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Spike 4" to="Kill Zone" method="_on_spike_4_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Rotating spike2" to="Kill Zone" method="_on_rotating_spike_2_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Empty Area2" to="Kill Zone" method="_on_empty_area_2_body_entered"]
