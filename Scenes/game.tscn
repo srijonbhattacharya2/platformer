@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ctpe344ks453u"]
+[gd_scene load_steps=26 format=3 uid="uid://ctpe344ks453u"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://dqb588w52r7b2" path="res://Assets/Pictures/Player.png" id="2_qxrlw"]
@@ -16,7 +16,9 @@
 [ext_resource type="Script" uid="uid://ct8cc12gmbwhq" path="res://Scripts/2_of_3.gd" id="9_1phco"]
 [ext_resource type="Script" uid="uid://so7rt4ro0uye" path="res://Scenes/3_of_3.gd" id="11_nb51f"]
 [ext_resource type="Texture2D" uid="uid://ud5aa7xo040l" path="res://Assets/Pictures/Lava.png" id="16_nnt18"]
+[ext_resource type="Texture2D" uid="uid://c06r054xkkw3t" path="res://Assets/Pictures/Rotating Spike.png" id="17_85qyi"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="17_ewbju"]
+[ext_resource type="Script" uid="uid://4ie3bwsp5r0u" path="res://Scenes/sprite_2d.gd" id="18_iivbl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
@@ -32,6 +34,9 @@ size = Vector2(376, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnt18"]
 size = Vector2(642.5, 197)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
+radius = 176.47662
 
 [node name="Game" type="Node2D"]
 
@@ -284,6 +289,30 @@ texture = ExtResource("6_i6g32")
 position = Vector2(867, 2410)
 shape = SubResource("RectangleShape2D_nb51f")
 
+[node name="Spike 3" type="Area2D" parent="Kill Zone"]
+position = Vector2(3056, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 3"]
+position = Vector2(864, 2430)
+scale = Vector2(0.5491803, 0.5491803)
+texture = ExtResource("6_i6g32")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 3"]
+position = Vector2(867, 2410)
+shape = SubResource("RectangleShape2D_nb51f")
+
+[node name="Rotating Spike" type="Area2D" parent="Kill Zone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating Spike"]
+position = Vector2(4612, 2445)
+shape = SubResource("CircleShape2D_iivbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating Spike"]
+z_index = -1
+position = Vector2(4606, 2481)
+texture = ExtResource("17_85qyi")
+script = ExtResource("18_iivbl")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_ewbju")
 volume_db = 4.622
@@ -292,3 +321,5 @@ autoplay = true
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Spike 3" to="Kill Zone" method="_on_spike_3_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Rotating Spike" to="Kill Zone" method="_on_rotating_spike_body_entered"]
