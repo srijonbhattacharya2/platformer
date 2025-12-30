@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://qd1tltxqdp02"]
 
-[ext_resource type="Script" uid="uid://2joip3wj05nw" path="res://Scenes/game_over.gd" id="1_eoghk"]
+[ext_resource type="Script" uid="uid://2joip3wj05nw" path="res://Scripts/game_over.gd" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_ojehl"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_8fo1c"]
 [ext_resource type="StyleBox" uid="uid://wjxpaacbjfpp" path="res://Assets/Button Setting.tres" id="3_ek8ke"]
