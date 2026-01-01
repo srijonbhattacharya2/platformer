@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cum8p3qgvccxa"]
+
+[ext_resource type="Script" uid="uid://c311lqkdc1l5s" path="res://triple_jump.gd" id="1_5doof"]
+[ext_resource type="Texture2D" uid="uid://cuy5d3orvcbmv" path="res://Assets/Pictures/Rainbow Coin.png" id="1_jvedd"]
+[ext_resource type="Shader" uid="uid://ysubxeguy0lk" path="res://triple_jump.gdshader" id="2_bfvii"]
+[ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="3_bfvii"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5doof"]
+radius = 69.02898
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v1qgw"]
+shader = ExtResource("2_bfvii")
+shader_parameter/speed = 0.5
+shader_parameter/saturation = 1.0
+shader_parameter/value = 1.0
+
+[node name="Triple Jump Coin" type="Node2D"]
+script = ExtResource("1_5doof")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jvedd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5doof")
+
+[node name="Label" type="Label" parent="."]
+material = SubResource("ShaderMaterial_v1qgw")
+offset_left = -79.0
+offset_top = -134.0
+offset_right = 34.0
+offset_bottom = -47.0
+scale = Vector2(1.4364061, 1.4364061)
+theme_override_colors/font_color = Color(0.31498176, 0.5634092, 1, 1)
+theme_override_fonts/font = ExtResource("3_bfvii")
+theme_override_font_sizes/font_size = 20
+text = "Jump
+Booster"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
