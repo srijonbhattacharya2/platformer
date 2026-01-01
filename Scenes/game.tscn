@@ -74,10 +74,14 @@ radius = 176.47662
 size = Vector2(116, 149)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exi56"]
+<<<<<<< HEAD
 size = Vector2(403, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vm72l"]
 size = Vector2(118.5, 118.5)
+=======
+size = Vector2(403, 73)
+>>>>>>> parent of 59a6fce (platform)
 
 [node name="Game" type="Node2D"]
 
