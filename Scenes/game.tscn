@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=37 format=3 uid="uid://ctpe344ks453u"]
 =======
 [gd_scene load_steps=28 format=3 uid="uid://ctpe344ks453u"]
 >>>>>>> parent of a49896a (Added Jump Booster)
+=======
+[gd_scene load_steps=23 format=3 uid="uid://ctpe344ks453u"]
+>>>>>>> parent of 2d50231 (Added elements)
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://dqb588w52r7b2" path="res://Assets/Pictures/Player.png" id="2_qxrlw"]
@@ -20,8 +24,8 @@
 [ext_resource type="Script" uid="uid://ct8cc12gmbwhq" path="res://Scripts/2_of_3.gd" id="9_1phco"]
 [ext_resource type="Script" uid="uid://so7rt4ro0uye" path="res://Scenes/3_of_3.gd" id="11_nb51f"]
 [ext_resource type="Texture2D" uid="uid://ud5aa7xo040l" path="res://Assets/Pictures/Lava.png" id="16_nnt18"]
-[ext_resource type="Texture2D" uid="uid://c06r054xkkw3t" path="res://Assets/Pictures/Rotating Spike.png" id="17_85qyi"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="17_ewbju"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://4ie3bwsp5r0u" path="res://Scenes/sprite_2d.gd" id="18_iivbl"]
 [ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="20_7nbq1"]
 <<<<<<< HEAD
@@ -30,6 +34,8 @@
 [ext_resource type="Script" uid="uid://ctu2jheb2peqp" path="res://Scenes/flag.gd" id="23_vm72l"]
 =======
 >>>>>>> parent of a49896a (Added Jump Booster)
+=======
+>>>>>>> parent of 2d50231 (Added elements)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
@@ -60,6 +66,7 @@ size = Vector2(376, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnt18"]
 size = Vector2(642.5, 197)
 
+<<<<<<< HEAD
 [sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
 <<<<<<< HEAD
 radius = 169.18924
@@ -87,6 +94,8 @@ size = Vector2(403, 73)
 size = Vector2(403, 73)
 >>>>>>> parent of 59a6fce (platform)
 
+=======
+>>>>>>> parent of 2d50231 (Added elements)
 [node name="Game" type="Node2D"]
 
 [node name="Global" type="Node" parent="."]
@@ -378,6 +387,7 @@ texture = ExtResource("6_i6g32")
 position = Vector2(867, 2410)
 shape = SubResource("RectangleShape2D_nb51f")
 
+<<<<<<< HEAD
 [node name="Spike 3" type="Area2D" parent="Kill Zone"]
 position = Vector2(3056, 0)
 
@@ -474,6 +484,8 @@ shape = SubResource("RectangleShape2D_nb51f")
 
 =======
 >>>>>>> parent of a49896a (Added Jump Booster)
+=======
+>>>>>>> parent of 2d50231 (Added elements)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_ewbju")
 volume_db = 4.622
@@ -565,6 +577,7 @@ shape = SubResource("RectangleShape2D_vm72l")
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
+<<<<<<< HEAD
 [connection signal="body_entered" from="Kill Zone/Spike 3" to="Kill Zone" method="_on_spike_3_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike" to="Kill Zone" method="_on_rotating_spike_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike2" to="Kill Zone" method="_on_rotating_spike_2_body_entered"]
@@ -577,3 +590,5 @@ shape = SubResource("RectangleShape2D_vm72l")
 [connection signal="body_entered" from="Flag" to="Flag" method="_on_body_entered"]
 =======
 >>>>>>> parent of a49896a (Added Jump Booster)
+=======
+>>>>>>> parent of 2d50231 (Added elements)
