@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b6r156162yt3o" path="res://Assets/Pictures/Spike.png" id="15_qxi04"]
 [ext_resource type="Texture2D" uid="uid://ud5aa7xo040l" path="res://Assets/Pictures/Lava.png" id="16_5bmgi"]
 [ext_resource type="Texture2D" uid="uid://c06r054xkkw3t" path="res://Assets/Pictures/Rotating Spike.png" id="17_8r41e"]
-[ext_resource type="Script" uid="uid://4ie3bwsp5r0u" path="res://Scenes/sprite_2d.gd" id="18_pytpd"]
+[ext_resource type="Script" uid="uid://c3excbvr6gy5" path="res://Scenes/sprite_2d.gd" id="18_pytpd"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="20_bved2"]
 [ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="21_fcg41"]
 [ext_resource type="Script" uid="uid://ctu2jheb2peqp" path="res://Scenes/flag.gd" id="23_14fqu"]
@@ -476,19 +476,6 @@ texture = ExtResource("21_fcg41")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
 position = Vector2(5357.5, 2087)
 shape = SubResource("RectangleShape2D_exi56")
-
-[node name="Triple Jump Coin" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-position = Vector2(9180, 2380)
-script = null
 
 [node name="Platform4" type="StaticBody2D" parent="."]
 z_index = -1
