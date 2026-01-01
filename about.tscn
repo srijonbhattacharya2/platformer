@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=3 uid="uid://c0gk3jyfgn3tm"]
+
+[ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_4q2eq"]
+[ext_resource type="Script" uid="uid://bjl5hfa3mvyub" path="res://about.gd" id="1_k56y8"]
+[ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_pp48r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp48r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k56y8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6umi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sx25x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5r8a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5tp7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ik7te"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7n2fl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkww8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j2lv4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdudg"]
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k56y8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(834, 468)
+scale = Vector2(2.6289063, 1.609375)
+texture = ExtResource("1_4q2eq")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 29.0
+offset_right = 1346.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0, 0.5231093, 0.842207, 1)
+theme_override_fonts/font = ExtResource("2_pp48r")
+theme_override_font_sizes/font_size = 200
+text = "  About  "
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 267.0
+offset_right = 1464.0
+offset_bottom = 759.0
+theme_override_colors/font_color = Color(0.030250562, 0, 0.8541837, 1)
+theme_override_font_sizes/font_size = 70
+text = "Developed and Designed by:
+Srijon Bhattacharya
+
+Published by:
+AppApex"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 798.0
+offset_top = 803.0
+offset_right = 997.0
+offset_bottom = 884.0
+scale = Vector2(1.6399996, 1.6399996)
+theme_override_colors/font_color = Color(0.37089646, 0.1861046, 1, 1)
+theme_override_fonts/font = ExtResource("2_pp48r")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pp48r")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k56y8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h6umi")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sx25x")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x5r8a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5tp7k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ik7te")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7n2fl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qkww8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_j2lv4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xdudg")
+text = "⬅️ Back"
