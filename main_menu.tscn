@@ -24,9 +24,9 @@ autoplay = true
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 722.0
-offset_top = 422.0
+offset_top = 345.0
 offset_right = 946.0
-offset_bottom = 505.0
+offset_bottom = 428.0
 scale = Vector2(2.3200011, 2.3200011)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jix8l")
