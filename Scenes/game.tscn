@@ -48,7 +48,7 @@ radius = 208.11775
 size = Vector2(933, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exi56"]
-size = Vector2(403, 73)
+size = Vector2(403, 69.5)
 
 [node name="Game" type="Node2D"]
 
@@ -464,7 +464,7 @@ scale = Vector2(0.3408203, 0.3408203)
 texture = ExtResource("20_7nbq1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
-position = Vector2(5357.5, 2084)
+position = Vector2(5357.5, 2085.75)
 shape = SubResource("RectangleShape2D_exi56")
 
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
