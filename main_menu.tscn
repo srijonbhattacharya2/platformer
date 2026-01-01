@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxtyfo1fbee7j"]
 
-[ext_resource type="AudioStream" uid="uid://b7xxopqknefqh" path="res://Assets/Audio/Main Menu Music.mp3" id="1_fu7sn"]
-[ext_resource type="Script" uid="uid://44ktlxkrq8la" path="res://main_menu.gd" id="1_nlkkf"]
+[ext_resource type="Script" uid="uid://d2ic0p1tlckhs" path="res://main_menu.gd" id="1_nlkkf"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_jix8l"]
+[ext_resource type="AudioStream" uid="uid://bcqa7gldqhtpi" path="res://Assets/Audio/Game Music 5.mp3" id="2_qe12f"]
 [ext_resource type="StyleBox" uid="uid://wjxpaacbjfpp" path="res://Assets/Button Setting.tres" id="3_glbon"]
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="4_jix8l"]
 [ext_resource type="Texture2D" uid="uid://d2bfudew2pxcy" path="res://Assets/Pictures/Ground.png" id="5_glbon"]
@@ -17,8 +17,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nlkkf")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_fu7sn")
+[node name="GameMusic5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qe12f")
 autoplay = true
 
 [node name="Button" type="Button" parent="."]

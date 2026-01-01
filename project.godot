@@ -11,9 +11,11 @@ config_version=5
 [application]
 
 config/name="Platformer"
-run/main_scene="uid://tww0hpdh6lwy"
+run/main_scene="uid://bxtyfo1fbee7j"
 config/features=PackedStringArray("4.5", "Forward Plus")
+run/max_fps=60
 boot_splash/show_image=false
+config/icon="uid://qkae33kdonos"
 
 [autoload]
 

@@ -9,3 +9,9 @@ func _process(_delta: float) -> void:
 
 	if Global.health == 0:
 		visible = false
+
+	if Global.health == 2:
+		visible = false
+
+	if Global.health == 3:
+		visible = false
