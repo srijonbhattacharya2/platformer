@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 700.0
 const JUMP_VELOCITY = -800.0
+const MAX_JUMPS = 2
 
 var jump_count := 0
 
@@ -12,7 +13,7 @@ func _physics_process(delta: float) -> void:
 		jump_count = 0  
 
 
-	if Input.is_action_just_pressed("ui_up") and jump_count < Global.MAX_JUMPS:
+	if Input.is_action_just_pressed("ui_up") and jump_count < MAX_JUMPS:
 		velocity.y = JUMP_VELOCITY
 		jump_count += 1
 

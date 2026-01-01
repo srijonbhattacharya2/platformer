@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=37 format=3 uid="uid://ctpe344ks453u"]
+=======
+[gd_scene load_steps=28 format=3 uid="uid://ctpe344ks453u"]
+>>>>>>> parent of a49896a (Added Jump Booster)
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://dqb588w52r7b2" path="res://Assets/Pictures/Player.png" id="2_qxrlw"]
@@ -19,16 +23,19 @@
 [ext_resource type="Texture2D" uid="uid://c06r054xkkw3t" path="res://Assets/Pictures/Rotating Spike.png" id="17_85qyi"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="17_ewbju"]
 [ext_resource type="Script" uid="uid://4ie3bwsp5r0u" path="res://Scenes/sprite_2d.gd" id="18_iivbl"]
-[ext_resource type="Texture2D" uid="uid://cojohss1ox7sn" path="res://Assets/Pictures/Spike.png.png" id="19_7t8sx"]
 [ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="20_7nbq1"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cum8p3qgvccxa" path="res://triple_jump.tscn" id="21_exi56"]
 [ext_resource type="Texture2D" uid="uid://cvd2ohi1p4y07" path="res://Assets/Pictures/Flag (2).png" id="23_mg4q0"]
 [ext_resource type="Script" uid="uid://ctu2jheb2peqp" path="res://Scenes/flag.gd" id="23_vm72l"]
+=======
+>>>>>>> parent of a49896a (Added Jump Booster)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewbju"]
+<<<<<<< HEAD
 size = Vector2(5627.8774, 415.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
@@ -36,27 +43,38 @@ size = Vector2(5597, 433)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22asu"]
 size = Vector2(1245, 5716)
+=======
+size = Vector2(8721.625, 415.5)
+>>>>>>> parent of a49896a (Added Jump Booster)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
 size = Vector2(101.5, 4245.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nb51f"]
+<<<<<<< HEAD
 size = Vector2(376, 107)
+=======
+size = Vector2(376, 96)
+>>>>>>> parent of a49896a (Added Jump Booster)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnt18"]
-size = Vector2(642.5, 312)
+size = Vector2(642.5, 197)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
+<<<<<<< HEAD
 radius = 169.18924
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7t8sx"]
 size = Vector2(933, 36)
+=======
+radius = 176.47662
+>>>>>>> parent of a49896a (Added Jump Booster)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mg4q0"]
 size = Vector2(116, 149)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exi56"]
-size = Vector2(403, 73)
+size = Vector2(403, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vm72l"]
 size = Vector2(118.5, 118.5)
@@ -208,12 +226,22 @@ scale = Vector2(1.0400013, 1.0400013)
 shape = SubResource("RectangleShape2D_ewbju")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
-position = Vector2(4917.5, 2169)
+position = Vector2(6474.7485, 2169)
 scale = Vector2(1.0400013, 1.0400013)
 shape = SubResource("RectangleShape2D_ewbju")
 
 [node name="Sprite2D19" type="Sprite2D" parent="Ground"]
 position = Vector2(9679.461, 2168.94)
+scale = Vector2(0.3573905, 0.42761695)
+texture = ExtResource("4_wowpa")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Ground"]
+position = Vector2(8112.9844, 2169.94)
+scale = Vector2(0.3437295, 0.4274584)
+texture = ExtResource("4_wowpa")
+
+[node name="Sprite2D21" type="Sprite2D" parent="Ground"]
+position = Vector2(8644.985, 2168.94)
 scale = Vector2(0.3573905, 0.42761695)
 texture = ExtResource("4_wowpa")
 
@@ -228,6 +256,7 @@ scale = Vector2(0.3573905, 0.42761695)
 texture = ExtResource("4_wowpa")
 
 [node name="Sprite2D24" type="Sprite2D" parent="Ground"]
+<<<<<<< HEAD
 position = Vector2(9115.976, 2168.94)
 scale = Vector2(0.44007277, 0.42761695)
 texture = ExtResource("4_wowpa")
@@ -260,6 +289,10 @@ texture = ExtResource("4_wowpa")
 [node name="Sprite2D29" type="Sprite2D" parent="Ground"]
 position = Vector2(14034.001, 2168.94)
 scale = Vector2(0.44007277, 0.42761695)
+=======
+position = Vector2(9179.476, 2168.94)
+scale = Vector2(0.3573905, 0.42761695)
+>>>>>>> parent of a49896a (Added Jump Booster)
 texture = ExtResource("4_wowpa")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground"]
@@ -279,31 +312,25 @@ shape = SubResource("RectangleShape2D_wowpa")
 [node name="Sprite2D" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(213.50008, 603.99994)
-scale = Vector2(3.0322268, 3.6863542)
+scale = Vector2(3.0322268, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(3269.0002, 603.99994)
-scale = Vector2(-2.9782095, 3.6863542)
+scale = Vector2(-2.9782095, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(6304, 603.99994)
-scale = Vector2(2.9522235, 3.686354)
+scale = Vector2(2.9522235, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Sky"]
 z_index = -5
 position = Vector2(9262, 603.99994)
-scale = Vector2(-2.9677775, 3.6863542)
-texture = ExtResource("4_3dryh")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Sky"]
-z_index = -5
-position = Vector2(12319, 603.99994)
-scale = Vector2(3.0322201, 3.6863542)
+scale = Vector2(-2.9677775, 2.566354)
 texture = ExtResource("4_3dryh")
 
 [node name="Kill Zone" type="Node2D" parent="."]
@@ -328,7 +355,7 @@ scale = Vector2(0.334375, 0.28888884)
 texture = ExtResource("16_nnt18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava"]
-position = Vector2(1669.75, 2623)
+position = Vector2(1669.75, 2562.5)
 shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="Spike 2" type="Area2D" parent="Kill Zone"]
@@ -393,6 +420,7 @@ texture = ExtResource("6_i6g32")
 position = Vector2(867, 2410)
 shape = SubResource("RectangleShape2D_nb51f")
 
+<<<<<<< HEAD
 [node name="Empty Area" type="Area2D" parent="Kill Zone"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Empty Area"]
@@ -436,6 +464,8 @@ texture = ExtResource("6_i6g32")
 position = Vector2(869, 2416.5)
 shape = SubResource("RectangleShape2D_nb51f")
 
+=======
+>>>>>>> parent of a49896a (Added Jump Booster)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_ewbju")
 volume_db = 4.622
@@ -464,7 +494,7 @@ scale = Vector2(0.3408203, 0.3408203)
 texture = ExtResource("20_7nbq1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-position = Vector2(5357.5, 2083.5)
+position = Vector2(5357.5, 2087)
 shape = SubResource("RectangleShape2D_exi56")
 
 [node name="Platform3" type="StaticBody2D" parent="."]
@@ -480,6 +510,7 @@ texture = ExtResource("20_7nbq1")
 position = Vector2(5357.5, 2087)
 shape = SubResource("RectangleShape2D_exi56")
 
+<<<<<<< HEAD
 [node name="Triple Jump Coin" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(9180, 2380)
 
@@ -521,6 +552,8 @@ texture = ExtResource("23_mg4q0")
 position = Vector2(13089.75, 1724.75)
 shape = SubResource("RectangleShape2D_vm72l")
 
+=======
+>>>>>>> parent of a49896a (Added Jump Booster)
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
@@ -528,8 +561,11 @@ shape = SubResource("RectangleShape2D_vm72l")
 [connection signal="body_entered" from="Kill Zone/Rotating Spike" to="Kill Zone" method="_on_rotating_spike_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike2" to="Kill Zone" method="_on_rotating_spike_2_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 4" to="Kill Zone" method="_on_spike_4_body_entered"]
+<<<<<<< HEAD
 [connection signal="body_entered" from="Kill Zone/Empty Area" to="Kill Zone" method="_on_empty_area_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike3" to="Kill Zone" method="_on_rotating_spike_3_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 5" to="Kill Zone" method="_on_spike_5_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 6" to="Kill Zone" method="_on_spike_6_body_entered"]
 [connection signal="body_entered" from="Flag" to="Flag" method="_on_body_entered"]
+=======
+>>>>>>> parent of a49896a (Added Jump Booster)
