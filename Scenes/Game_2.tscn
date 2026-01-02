@@ -47,7 +47,7 @@ size = Vector2(101.5, 4245.5)
 size = Vector2(376, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnt18"]
-size = Vector2(506.31885, 312)
+size = Vector2(507.70898, 312)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
 radius = 183.02458
@@ -383,12 +383,12 @@ shape = SubResource("RectangleShape2D_nb51f")
 [node name="Lava" type="Area2D" parent="Kill Zone"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Lava"]
-position = Vector2(1668.9999, 2623)
-scale = Vector2(0.334375, 0.28888884)
+position = Vector2(1666.0001, 2623)
+scale = Vector2(0.28020832, 0.28888884)
 texture = ExtResource("16_5bmgi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava"]
-position = Vector2(1669.75, 2623)
+position = Vector2(1653, 2622)
 shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="Spike 2" type="Area2D" parent="Kill Zone"]
@@ -593,7 +593,7 @@ scale = Vector2(0.26276588, 0.28888884)
 texture = ExtResource("16_5bmgi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava3"]
-position = Vector2(1601.6592, 2623)
+position = Vector2(1600.5977, 2625.7485)
 shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
