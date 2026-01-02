@@ -86,7 +86,7 @@ shape = SubResource("RectangleShape2D_wrm1d")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(190, -72)
 limit_left = -1218
-limit_top = 1486
+limit_top = 1667
 limit_right = 20024
 limit_bottom = 2643
 position_smoothing_enabled = true
@@ -495,7 +495,7 @@ position = Vector2(869, 2416.5)
 shape = SubResource("RectangleShape2D_nb51f")
 
 [node name="Lava2" type="Area2D" parent="Kill Zone"]
-position = Vector2(9227, -588)
+position = Vector2(9204, -593)
 scale = Vector2(2.1657102, 1.2404087)
 
 [node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Lava2"]
@@ -506,6 +506,19 @@ texture = ExtResource("16_5bmgi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava2"]
 position = Vector2(1669.75, 2623)
 shape = SubResource("RectangleShape2D_nnt18")
+
+[node name="Rotating Spike4" type="Area2D" parent="Kill Zone"]
+position = Vector2(9661, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating Spike4"]
+position = Vector2(4602, 2483)
+shape = SubResource("CircleShape2D_iivbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating Spike4"]
+z_index = -1
+position = Vector2(4606, 2481)
+texture = ExtResource("17_8r41e")
+script = ExtResource("18_pytpd")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_bved2")
@@ -632,5 +645,6 @@ script = ExtResource("27_6uywo")
 [connection signal="body_entered" from="Kill Zone/Spike 5" to="Kill Zone" method="_on_spike_5_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 6" to="Kill Zone" method="_on_spike_6_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava2" to="Kill Zone" method="_on_lava_2_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Rotating Spike4" to="Kill Zone" method="_on_rotating_spike_4_body_entered"]
 [connection signal="body_entered" from="Flag Platform/Flag" to="Flag Platform/Flag" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart Gain" to="Heart Gain" method="_on_body_entered"]

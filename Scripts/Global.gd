@@ -2,6 +2,7 @@ extends Node
 
 var health = 3
 var game_over_triggered := false
+var s_h = 0
 
 func _process(delta: float) -> void:
 	if health <= 0 and not game_over_triggered:
