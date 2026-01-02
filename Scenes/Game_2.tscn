@@ -546,6 +546,31 @@ texture = ExtResource("19_1hjfy")
 position = Vector2(868, 2354.5)
 shape = SubResource("CapsuleShape2D_1hjfy")
 
+[node name="Spike 9" type="Area2D" parent="Kill Zone"]
+position = Vector2(15121, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 9"]
+position = Vector2(868.00073, 2354.5)
+scale = Vector2(0.8965477, 1.0591121)
+texture = ExtResource("19_1hjfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 9"]
+position = Vector2(868, 2354.5)
+shape = SubResource("CapsuleShape2D_1hjfy")
+
+[node name="Rotating Spike5" type="Area2D" parent="Kill Zone"]
+position = Vector2(9661, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating Spike5"]
+position = Vector2(4602, 2483)
+shape = SubResource("CircleShape2D_iivbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating Spike5"]
+z_index = -1
+position = Vector2(4606, 2481)
+texture = ExtResource("17_8r41e")
+script = ExtResource("18_pytpd")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_bved2")
 volume_db = 4.622
@@ -694,6 +719,28 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 150
 text = "☝"
 
+[node name="Heart loss2" type="Area2D" parent="."]
+position = Vector2(18035, 12)
+script = ExtResource("26_v3sji")
+
+[node name="Sprite2D" type="Sprite2D" parent="Heart loss2"]
+position = Vector2(87, 2418.9998)
+scale = Vector2(0.14267206, 0.14043096)
+texture = ExtResource("27_rhger")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heart loss2"]
+position = Vector2(87, 2415)
+shape = SubResource("CircleShape2D_e27c8")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 4123.0
+offset_top = 1904.0
+offset_right = 5192.0
+offset_bottom = 1973.0
+theme_override_colors/font_color = Color(0.12209252, 0.16081437, 0.99999994, 1)
+theme_override_font_sizes/font_size = 50
+text = "Press Up arrow key 2 times for double jump!"
+
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
@@ -707,6 +754,11 @@ text = "☝"
 [connection signal="body_entered" from="Kill Zone/Spike 6" to="Kill Zone" method="_on_spike_6_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava2" to="Kill Zone" method="_on_lava_2_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike4" to="Kill Zone" method="_on_rotating_spike_4_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Spike 7" to="Kill Zone" method="_on_spike_7_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Spike 8" to="Kill Zone" method="_on_spike_8_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Spike 9" to="Kill Zone" method="_on_spike_9_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Rotating Spike5" to="Kill Zone" method="_on_rotating_spike_5_body_entered"]
 [connection signal="body_entered" from="Flag Platform/Flag" to="Flag Platform/Flag" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart Gain" to="Heart Gain" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart loss" to="Heart loss" method="_on_body_entered"]
+[connection signal="body_entered" from="Heart loss2" to="Heart loss2" method="_on_body_entered"]

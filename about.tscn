@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://c0gk3jyfgn3tm"]
+[gd_scene load_steps=15 format=3 uid="uid://c0gk3jyfgn3tm"]
 
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_4q2eq"]
 [ext_resource type="Script" uid="uid://bjl5hfa3mvyub" path="res://about.gd" id="1_k56y8"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_pp48r"]
 [ext_resource type="Texture2D" uid="uid://d2bfudew2pxcy" path="res://Assets/Pictures/Ground.png" id="4_h6umi"]
 [ext_resource type="AudioStream" uid="uid://s4woexhutivi" path="res://Assets/Audio/Select.mp3" id="5_sx25x"]
+[ext_resource type="Texture2D" uid="uid://bkbocm85hq0ey" path="res://Assets/Pictures/AppApex_Logo_Master.png" id="6_x5r8a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp48r"]
 
@@ -13,14 +14,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6umi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sx25x"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5r8a"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5tp7k"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ik7te"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7n2fl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkww8"]
 
@@ -56,7 +49,7 @@ offset_left = 588.0
 offset_top = 85.0
 offset_right = 1329.0
 offset_bottom = 270.0
-theme_override_colors/font_color = Color(0, 0.5231093, 0.842207, 1)
+theme_override_colors/font_color = Color(0.21831939, 0.2852567, 1, 1)
 theme_override_fonts/font = ExtResource("2_pp48r")
 theme_override_font_sizes/font_size = 200
 text = "  About  "
@@ -64,42 +57,35 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 491.0
-offset_top = 323.0
-offset_right = 1447.0
-offset_bottom = 815.0
-theme_override_colors/font_color = Color(0.030250562, 0, 0.8541837, 1)
-theme_override_font_sizes/font_size = 70
-text = "Developed and Designed by:
-Srijon Bhattacharya
+offset_left = 155.0
+offset_top = 324.0
+offset_right = 1797.0
+offset_bottom = 816.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Designer & Developer: Srijon Bhattacharya
 
-Published by:
-AppApex"
+Publisher: AppApex"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 392.0
-offset_top = 774.0
-offset_right = 591.0
-offset_bottom = 855.0
+offset_left = 36.0
+offset_top = 780.0
+offset_right = 316.48785
+offset_bottom = 863.0
 scale = Vector2(1.6399996, 1.6399996)
-theme_override_colors/font_color = Color(0.37089646, 0.1861046, 1, 1)
-theme_override_fonts/font = ExtResource("2_pp48r")
+theme_override_colors/font_color = Color(0.25691953, 0.2555743, 1, 1)
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pp48r")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k56y8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_h6umi")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sx25x")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_x5r8a")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5tp7k")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ik7te")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7n2fl")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_qkww8")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_j2lv4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xdudg")
-text = "⬅️ Back"
+text = "Back"
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(905, 2102)
@@ -108,27 +94,21 @@ texture = ExtResource("4_h6umi")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1017.0
-offset_top = 739.0
-offset_right = 1458.0
-offset_bottom = 859.0
+offset_left = 1385.0
+offset_top = 751.0
+offset_right = 1699.0245
+offset_bottom = 847.95123
 scale = Vector2(1.6399996, 1.6399996)
-theme_override_colors/font_color = Color(0.37089646, 0.1861046, 1, 1)
-theme_override_fonts/font = ExtResource("2_pp48r")
+theme_override_colors/font_color = Color(0.25691953, 0.2555743, 1, 1)
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pp48r")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k56y8")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_h6umi")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sx25x")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_x5r8a")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5tp7k")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ik7te")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7n2fl")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_qkww8")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_j2lv4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xdudg")
-text = "📋 Send
-Feedback"
+text = "Contact"
 
 [node name="Label3" type="Label" parent="."]
 visible = false
@@ -147,6 +127,49 @@ vertical_alignment = 1
 stream = ExtResource("5_sx25x")
 volume_db = -4.623
 pitch_scale = 0.92
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(45.999992, 28.320004)
+scale = Vector2(0.17312501, 0.17312501)
+texture = ExtResource("6_x5r8a")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 302.0
+offset_bottom = 151.0
+scale = Vector2(0.32000002, 0.32000002)
+theme_override_colors/font_color = Color(0.48235294, 0.16470589, 0.99607843, 1)
+theme_override_font_sizes/font_size = 70
+text = "AppApex"
+
+[node name="Label5" type="Label" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 163.0
+offset_top = 332.0
+offset_right = 1805.0
+offset_bottom = 824.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.16078432)
+theme_override_font_sizes/font_size = 50
+text = "Designer & Developer: Srijon Bhattacharya
+
+Publisher: AppApex"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 600.0
+offset_top = 97.0
+offset_right = 1341.0
+offset_bottom = 282.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.11764706)
+theme_override_fonts/font = ExtResource("2_pp48r")
+theme_override_font_sizes/font_size = 200
+text = "  About  "
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
