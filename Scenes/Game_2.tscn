@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://tww0hpdh6lwy"]
+[gd_scene load_steps=43 format=3 uid="uid://tww0hpdh6lwy"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_oodnk"]
 [ext_resource type="Script" uid="uid://bprm5oc17ekn2" path="res://Scripts/Player.gd" id="2_q6kiu"]
@@ -22,12 +22,14 @@
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="20_bved2"]
 [ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="21_fcg41"]
 [ext_resource type="Script" uid="uid://ctu2jheb2peqp" path="res://Scenes/flag.gd" id="23_14fqu"]
-[ext_resource type="Texture2D" uid="uid://gu70j67irbcj" path="res://Assets/Pictures/Heart.png" id="23_oodnk"]
 [ext_resource type="Script" uid="uid://cnodbbncwjlre" path="res://Scenes/heart_gain.gd" id="23_q6kiu"]
-[ext_resource type="Script" uid="uid://bistjdfunx3x2" path="res://Scripts/sprite_2d.gd" id="24_oodnk"]
 [ext_resource type="Texture2D" uid="uid://cvd2ohi1p4y07" path="res://Assets/Pictures/Flag (2).png" id="24_sh6dq"]
+[ext_resource type="Texture2D" uid="uid://bhremmn2422mn" path="res://Assets/Pictures/Purple Potion.png" id="25_1hjfy"]
 [ext_resource type="Script" uid="uid://di00xyqidbrqt" path="res://Scenes/platform_6.gd" id="26_e27c8"]
+[ext_resource type="Script" uid="uid://cus4s3jq1vq5k" path="res://Scenes/heart_loss.gd" id="26_v3sji"]
 [ext_resource type="Script" uid="uid://diywybya4rjfy" path="res://Scenes/collision_shape_2d.gd" id="27_6uywo"]
+[ext_resource type="Texture2D" uid="uid://c0t0fbj0lwoat" path="res://Assets/Pictures/Red Potion.png" id="27_rhger"]
+[ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="30_rhger"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
@@ -45,7 +47,7 @@ size = Vector2(101.5, 4245.5)
 size = Vector2(376, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnt18"]
-size = Vector2(642.5, 312)
+size = Vector2(506.31885, 312)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
 radius = 169.18924
@@ -64,7 +66,7 @@ size = Vector2(403, 69.5)
 size = Vector2(118.5, 118.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e27c8"]
-radius = 28.01785
+radius = 51.156624
 
 [node name="Game" type="Node2D"]
 
@@ -499,12 +501,12 @@ position = Vector2(9204, -593)
 scale = Vector2(2.1657102, 1.2404087)
 
 [node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Lava2"]
-position = Vector2(1668.9999, 2623)
-scale = Vector2(0.334375, 0.28888884)
+position = Vector2(1600.2551, 2623)
+scale = Vector2(0.26276588, 0.28888884)
 texture = ExtResource("16_5bmgi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava2"]
-position = Vector2(1669.75, 2623)
+position = Vector2(1601.6592, 2623)
 shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="Rotating Spike4" type="Area2D" parent="Kill Zone"]
@@ -519,6 +521,30 @@ z_index = -1
 position = Vector2(4606, 2481)
 texture = ExtResource("17_8r41e")
 script = ExtResource("18_pytpd")
+
+[node name="Spike 7" type="Area2D" parent="Kill Zone"]
+position = Vector2(14410, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 7"]
+position = Vector2(864, 2430)
+scale = Vector2(0.5491803, 0.5491803)
+texture = ExtResource("15_qxi04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 7"]
+position = Vector2(869, 2416.5)
+shape = SubResource("RectangleShape2D_nb51f")
+
+[node name="Spike 8" type="Area2D" parent="Kill Zone"]
+position = Vector2(15033, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 8"]
+position = Vector2(868.00073, 2354.5)
+scale = Vector2(0.8965477, 1.0591121)
+texture = ExtResource("19_1hjfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 8"]
+position = Vector2(868, 2354.5)
+shape = SubResource("CapsuleShape2D_1hjfy")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_bved2")
@@ -605,16 +631,28 @@ position = Vector2(13089.75, 1724.75)
 shape = SubResource("RectangleShape2D_vm72l")
 
 [node name="Heart Gain" type="Area2D" parent="."]
-position = Vector2(8804, 0)
+position = Vector2(10765, -382)
 script = ExtResource("23_q6kiu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Heart Gain"]
 position = Vector2(87, 2418.9998)
 scale = Vector2(0.14267206, 0.14043096)
-texture = ExtResource("23_oodnk")
-script = ExtResource("24_oodnk")
+texture = ExtResource("25_1hjfy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart Gain"]
+position = Vector2(87, 2415)
+shape = SubResource("CircleShape2D_e27c8")
+
+[node name="Heart loss" type="Area2D" parent="."]
+position = Vector2(7564, 0)
+script = ExtResource("26_v3sji")
+
+[node name="Sprite2D" type="Sprite2D" parent="Heart loss"]
+position = Vector2(87, 2418.9998)
+scale = Vector2(0.14267206, 0.14043096)
+texture = ExtResource("27_rhger")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heart loss"]
 position = Vector2(87, 2415)
 shape = SubResource("CircleShape2D_e27c8")
 
@@ -633,6 +671,29 @@ position = Vector2(5357.5, 2085.75)
 shape = SubResource("RectangleShape2D_exi56")
 script = ExtResource("27_6uywo")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 10442.0
+offset_top = 2228.0
+offset_right = 11319.0
+offset_bottom = 2424.0
+theme_override_colors/font_color = Color(0.33117434, 0.195591, 1, 1)
+theme_override_fonts/font = ExtResource("30_rhger")
+theme_override_font_sizes/font_size = 70
+text = "
+Benifitial Health Potion!!!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 10805.0
+offset_top = 2119.0
+offset_right = 10890.0
+offset_bottom = 2353.0
+theme_override_colors/font_color = Color(0.116534986, 0.35315317, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+text = "☝"
+
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
@@ -648,3 +709,4 @@ script = ExtResource("27_6uywo")
 [connection signal="body_entered" from="Kill Zone/Rotating Spike4" to="Kill Zone" method="_on_rotating_spike_4_body_entered"]
 [connection signal="body_entered" from="Flag Platform/Flag" to="Flag Platform/Flag" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart Gain" to="Heart Gain" method="_on_body_entered"]
+[connection signal="body_entered" from="Heart loss" to="Heart loss" method="_on_body_entered"]

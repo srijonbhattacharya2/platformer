@@ -5,6 +5,10 @@ var game_over_triggered := false
 var s_h = 0
 
 func _process(delta: float) -> void:
-	if health <= 0 and not game_over_triggered:
+	if health == 0 and not game_over_triggered:
 		game_over_triggered = true
 		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+
+	if health == -1 and not game_over_triggered:
+		game_over_triggered = true
+		get_tree().change_scene_to_file("res://Scenes/poision popup.tscn")
