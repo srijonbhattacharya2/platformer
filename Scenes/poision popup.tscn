@@ -78,10 +78,11 @@ autoplay = true
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 13.0
+offset_left = 181.0
 offset_top = 810.0
-offset_right = 1907.0
+offset_right = 2075.0
 offset_bottom = 916.0
+scale = Vector2(0.84000003, 0.84000003)
 theme_override_colors/font_color = Color(0.13979697, 0.37474334, 0.99976057, 1)
 theme_override_fonts/font = ExtResource("3_kx7r8")
 theme_override_font_sizes/font_size = 100
@@ -91,6 +92,16 @@ text = "😈  That potion was actually poision!!!  😈"
 stream = ExtResource("6_jrtyg")
 volume_db = -4.623
 pitch_scale = 0.92
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-2610, 517)
+scale = Vector2(-3.7759001, 2.9941816)
+texture = ExtResource("2_35oh6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(4940.9995, 517)
+scale = Vector2(-3.7759001, 2.9941816)
+texture = ExtResource("2_35oh6")
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

@@ -50,7 +50,7 @@ size = Vector2(376, 107)
 size = Vector2(506.31885, 312)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
-radius = 169.18924
+radius = 183.02458
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7t8sx"]
 size = Vector2(933, 36)
@@ -558,18 +558,43 @@ texture = ExtResource("19_1hjfy")
 position = Vector2(868, 2354.5)
 shape = SubResource("CapsuleShape2D_1hjfy")
 
-[node name="Rotating Spike5" type="Area2D" parent="Kill Zone"]
-position = Vector2(9661, -19)
+[node name="Rotating Spike6" type="Area2D" parent="Kill Zone"]
+position = Vector2(11903, -19)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating Spike5"]
-position = Vector2(4602, 2483)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Rotating Spike6"]
+position = Vector2(4611, 2448)
 shape = SubResource("CircleShape2D_iivbl")
 
-[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating Spike5"]
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Rotating Spike6"]
 z_index = -1
 position = Vector2(4606, 2481)
 texture = ExtResource("17_8r41e")
 script = ExtResource("18_pytpd")
+
+[node name="Spike 10" type="Area2D" parent="Kill Zone"]
+position = Vector2(16251, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 10"]
+position = Vector2(868.00073, 2354.5)
+scale = Vector2(0.8965477, 1.0591121)
+texture = ExtResource("19_1hjfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 10"]
+position = Vector2(868, 2354.5)
+shape = SubResource("CapsuleShape2D_1hjfy")
+
+[node name="Lava3" type="Area2D" parent="Kill Zone"]
+position = Vector2(15367, -593)
+scale = Vector2(1.4457102, 1.2404087)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Lava3"]
+position = Vector2(1600.2551, 2623)
+scale = Vector2(0.26276588, 0.28888884)
+texture = ExtResource("16_5bmgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava3"]
+position = Vector2(1601.6592, 2623)
+shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_bved2")
@@ -630,7 +655,7 @@ shape = SubResource("RectangleShape2D_exi56")
 
 [node name="Flag Platform" type="StaticBody2D" parent="."]
 z_index = -1
-position = Vector2(13892, -15)
+position = Vector2(15207, -15)
 
 [node name="Sprite2D" type="Sprite2D" parent="Flag Platform"]
 position = Vector2(5358.0005, 2072)
@@ -757,7 +782,9 @@ text = "Press Up arrow key 2 times for double jump!"
 [connection signal="body_entered" from="Kill Zone/Spike 7" to="Kill Zone" method="_on_spike_7_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 8" to="Kill Zone" method="_on_spike_8_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 9" to="Kill Zone" method="_on_spike_9_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Rotating Spike5" to="Kill Zone" method="_on_rotating_spike_5_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Rotating Spike6" to="Kill Zone" method="_on_rotating_spike_6_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Spike 10" to="Kill Zone" method="_on_spike_10_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Lava3" to="Kill Zone" method="_on_lava_3_body_entered"]
 [connection signal="body_entered" from="Flag Platform/Flag" to="Flag Platform/Flag" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart Gain" to="Heart Gain" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart loss" to="Heart loss" method="_on_body_entered"]

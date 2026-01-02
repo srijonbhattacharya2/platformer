@@ -77,6 +77,16 @@ func _on_spike_7_body_entered(body: CharacterBody2D) -> void:
 	print(str(Global.health))
 
 
-func _on_rotating_spike_5_body_entered(body: CharacterBody2D) -> void:
+func _on_rotating_spike_6_body_entered(body: CharacterBody2D) -> void:
 	Global.health -= 1
+	print(str(Global.health))
+
+
+func _on_spike_10_body_entered(body: CharacterBody2D) -> void:
+	Global.health -= 1
+	print(str(Global.health))
+
+
+func _on_lava_3_body_entered(body: CharacterBody2D) -> void:
+	Global.health = 0
 	print(str(Global.health))
