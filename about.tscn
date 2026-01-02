@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://c0gk3jyfgn3tm"]
+[gd_scene load_steps=16 format=3 uid="uid://c0gk3jyfgn3tm"]
 
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_4q2eq"]
 [ext_resource type="Script" uid="uid://bjl5hfa3mvyub" path="res://about.gd" id="1_k56y8"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_pp48r"]
+[ext_resource type="Texture2D" uid="uid://d2bfudew2pxcy" path="res://Assets/Pictures/Ground.png" id="4_h6umi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp48r"]
 
@@ -91,3 +92,10 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_qkww8")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_j2lv4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xdudg")
 text = "⬅️ Back"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(905, 2102)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("4_h6umi")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

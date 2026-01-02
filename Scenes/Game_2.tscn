@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://tww0hpdh6lwy"]
+[gd_scene load_steps=41 format=3 uid="uid://tww0hpdh6lwy"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_oodnk"]
 [ext_resource type="Script" uid="uid://bprm5oc17ekn2" path="res://Scripts/Player.gd" id="2_q6kiu"]
@@ -18,13 +18,16 @@
 [ext_resource type="Texture2D" uid="uid://ud5aa7xo040l" path="res://Assets/Pictures/Lava.png" id="16_5bmgi"]
 [ext_resource type="Texture2D" uid="uid://c06r054xkkw3t" path="res://Assets/Pictures/Rotating Spike.png" id="17_8r41e"]
 [ext_resource type="Script" uid="uid://c3excbvr6gy5" path="res://Scenes/sprite_2d.gd" id="18_pytpd"]
+[ext_resource type="Texture2D" uid="uid://bb5svjmlmda1j" path="res://Assets/Pictures/Spike2.png" id="19_1hjfy"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="20_bved2"]
 [ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="21_fcg41"]
 [ext_resource type="Script" uid="uid://ctu2jheb2peqp" path="res://Scenes/flag.gd" id="23_14fqu"]
 [ext_resource type="Texture2D" uid="uid://gu70j67irbcj" path="res://Assets/Pictures/Heart.png" id="23_oodnk"]
 [ext_resource type="Script" uid="uid://cnodbbncwjlre" path="res://Scenes/heart_gain.gd" id="23_q6kiu"]
-[ext_resource type="Script" uid="uid://bistjdfunx3x2" path="res://scripts/sprite_2d.gd" id="24_oodnk"]
+[ext_resource type="Script" uid="uid://bistjdfunx3x2" path="res://Scripts/sprite_2d.gd" id="24_oodnk"]
 [ext_resource type="Texture2D" uid="uid://cvd2ohi1p4y07" path="res://Assets/Pictures/Flag (2).png" id="24_sh6dq"]
+[ext_resource type="Script" uid="uid://di00xyqidbrqt" path="res://Scenes/platform_6.gd" id="26_e27c8"]
+[ext_resource type="Script" uid="uid://diywybya4rjfy" path="res://Scenes/collision_shape_2d.gd" id="27_6uywo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrm1d"]
 size = Vector2(102, 99.5)
@@ -33,7 +36,7 @@ size = Vector2(102, 99.5)
 size = Vector2(5627.8774, 415.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
-size = Vector2(5597, 433)
+size = Vector2(11359, 433)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
 size = Vector2(101.5, 4245.5)
@@ -50,8 +53,9 @@ radius = 169.18924
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7t8sx"]
 size = Vector2(933, 36)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg4q0"]
-size = Vector2(116, 149)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hjfy"]
+radius = 48.5
+height = 219.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exi56"]
 size = Vector2(403, 69.5)
@@ -83,7 +87,7 @@ shape = SubResource("RectangleShape2D_wrm1d")
 position = Vector2(190, -72)
 limit_left = -1218
 limit_top = 1486
-limit_right = 13514
+limit_right = 20024
 limit_bottom = 2643
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
@@ -234,7 +238,7 @@ scale = Vector2(0.44007277, 0.42761695)
 texture = ExtResource("12_2v647")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
-position = Vector2(11576.5, 2166.5)
+position = Vector2(14457.5, 2166.5)
 shape = SubResource("RectangleShape2D_7nbq1")
 debug_color = Color(6.0644747e-06, 0.5837941, 0.68323255, 0.41960785)
 
@@ -260,6 +264,51 @@ texture = ExtResource("12_2v647")
 
 [node name="Sprite2D29" type="Sprite2D" parent="Ground"]
 position = Vector2(14034.001, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D30" type="Sprite2D" parent="Ground"]
+position = Vector2(14699.001, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D31" type="Sprite2D" parent="Ground"]
+position = Vector2(15375.001, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D32" type="Sprite2D" parent="Ground"]
+position = Vector2(16049.976, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D33" type="Sprite2D" parent="Ground"]
+position = Vector2(16714.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D34" type="Sprite2D" parent="Ground"]
+position = Vector2(17390.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D35" type="Sprite2D" parent="Ground"]
+position = Vector2(18064.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D36" type="Sprite2D" parent="Ground"]
+position = Vector2(18729.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D37" type="Sprite2D" parent="Ground"]
+position = Vector2(19405.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D38" type="Sprite2D" parent="Ground"]
+position = Vector2(20078, 2168.94)
 scale = Vector2(0.44007277, 0.42761695)
 texture = ExtResource("12_2v647")
 
@@ -301,6 +350,18 @@ texture = ExtResource("13_xfkx7")
 z_index = -5
 position = Vector2(12319, 603.99994)
 scale = Vector2(3.0322201, 3.6863542)
+texture = ExtResource("13_xfkx7")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sky"]
+z_index = -5
+position = Vector2(15422, 603.99994)
+scale = Vector2(-3.0477784, 3.6863542)
+texture = ExtResource("13_xfkx7")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sky"]
+z_index = -5
+position = Vector2(18543, 603.99994)
+scale = Vector2(3.0722215, 3.6863542)
 texture = ExtResource("13_xfkx7")
 
 [node name="Kill Zone" type="Node2D" parent="."]
@@ -413,12 +474,13 @@ script = ExtResource("18_pytpd")
 position = Vector2(9484, 9)
 
 [node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 5"]
-position = Vector2(864, 2386.0002)
-scale = Vector2(0.5491803, 0.5491803)
+position = Vector2(868.00073, 2354.5)
+scale = Vector2(0.8965477, 1.0591121)
+texture = ExtResource("19_1hjfy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 5"]
-position = Vector2(864, 2386.5)
-shape = SubResource("RectangleShape2D_mg4q0")
+position = Vector2(868, 2354.5)
+shape = SubResource("CapsuleShape2D_1hjfy")
 
 [node name="Spike 6" type="Area2D" parent="Kill Zone"]
 position = Vector2(10848, 0)
@@ -431,6 +493,19 @@ texture = ExtResource("15_qxi04")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 6"]
 position = Vector2(869, 2416.5)
 shape = SubResource("RectangleShape2D_nb51f")
+
+[node name="Lava2" type="Area2D" parent="Kill Zone"]
+position = Vector2(9227, -588)
+scale = Vector2(2.1657102, 1.2404087)
+
+[node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Lava2"]
+position = Vector2(1668.9999, 2623)
+scale = Vector2(0.334375, 0.28888884)
+texture = ExtResource("16_5bmgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Lava2"]
+position = Vector2(1669.75, 2623)
+shape = SubResource("RectangleShape2D_nnt18")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_bved2")
@@ -489,30 +564,30 @@ texture = ExtResource("21_fcg41")
 position = Vector2(5357.5, 2085.75)
 shape = SubResource("RectangleShape2D_exi56")
 
-[node name="Platform5" type="StaticBody2D" parent="."]
+[node name="Flag Platform" type="StaticBody2D" parent="."]
 z_index = -1
-position = Vector2(7623, -15)
+position = Vector2(13892, -15)
 
-[node name="Sprite2D" type="Sprite2D" parent="Platform5"]
+[node name="Sprite2D" type="Sprite2D" parent="Flag Platform"]
 position = Vector2(5358.0005, 2072)
 scale = Vector2(0.3408203, 0.3408203)
 texture = ExtResource("21_fcg41")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flag Platform"]
 position = Vector2(5357.5, 2087)
 shape = SubResource("RectangleShape2D_exi56")
 
-[node name="Flag" type="Area2D" parent="Platform5"]
+[node name="Flag" type="Area2D" parent="Flag Platform"]
 position = Vector2(-8868, 84.000015)
 scale = Vector2(1.0883454, 1.0883454)
 script = ExtResource("23_14fqu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Platform5/Flag"]
+[node name="Sprite2D" type="Sprite2D" parent="Flag Platform/Flag"]
 position = Vector2(13087, 1727)
 scale = Vector2(0.554861, 0.554861)
 texture = ExtResource("24_sh6dq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5/Flag"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flag Platform/Flag"]
 position = Vector2(13089.75, 1724.75)
 shape = SubResource("RectangleShape2D_vm72l")
 
@@ -530,6 +605,21 @@ script = ExtResource("24_oodnk")
 position = Vector2(87, 2415)
 shape = SubResource("CircleShape2D_e27c8")
 
+[node name="Platform6" type="StaticBody2D" parent="."]
+z_index = -1
+position = Vector2(1684, 181)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform6"]
+position = Vector2(5358.0005, 2072)
+scale = Vector2(0.3408203, 0.3408203)
+texture = ExtResource("21_fcg41")
+script = ExtResource("26_e27c8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
+position = Vector2(5357.5, 2085.75)
+shape = SubResource("RectangleShape2D_exi56")
+script = ExtResource("27_6uywo")
+
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
@@ -541,5 +631,6 @@ shape = SubResource("CircleShape2D_e27c8")
 [connection signal="body_entered" from="Kill Zone/Rotating Spike3" to="Kill Zone" method="_on_rotating_spike_3_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 5" to="Kill Zone" method="_on_spike_5_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 6" to="Kill Zone" method="_on_spike_6_body_entered"]
-[connection signal="body_entered" from="Platform5/Flag" to="Platform5/Flag" method="_on_body_entered"]
+[connection signal="body_entered" from="Kill Zone/Lava2" to="Kill Zone" method="_on_lava_2_body_entered"]
+[connection signal="body_entered" from="Flag Platform/Flag" to="Flag Platform/Flag" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart Gain" to="Heart Gain" method="_on_body_entered"]
