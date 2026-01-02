@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxtyfo1fbee7j"]
+[gd_scene load_steps=9 format=3 uid="uid://bxtyfo1fbee7j"]
 
 [ext_resource type="Script" uid="uid://d2ic0p1tlckhs" path="res://main_menu.gd" id="1_nlkkf"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_jix8l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="4_jix8l"]
 [ext_resource type="Texture2D" uid="uid://d2bfudew2pxcy" path="res://Assets/Pictures/Ground.png" id="5_glbon"]
 [ext_resource type="Texture2D" uid="uid://dqb588w52r7b2" path="res://Assets/Pictures/Player.png" id="7_qe12f"]
+[ext_resource type="AudioStream" uid="uid://s4woexhutivi" path="res://Assets/Audio/Select.mp3" id="8_8qtwp"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -23,11 +24,11 @@ autoplay = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 722.0
-offset_top = 345.0
-offset_right = 946.0
-offset_bottom = 428.0
-scale = Vector2(2.3200011, 2.3200011)
+offset_left = 840.0
+offset_top = 327.0
+offset_right = 1064.0
+offset_bottom = 410.0
+scale = Vector2(1.6799986, 1.6799986)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jix8l")
 theme_override_font_sizes/font_size = 37
@@ -73,11 +74,6 @@ theme_override_font_sizes/font_size = 100
 text = "     🎮
 Compatible"
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(905, 2029)
-scale = Vector2(2.2, 2.2)
-texture = ExtResource("5_glbon")
-
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(1923, 637.00006)
 rotation = 0.4191068
@@ -85,11 +81,11 @@ texture = ExtResource("7_qe12f")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 722.0
-offset_top = 582.0
-offset_right = 946.0
-offset_bottom = 665.0
-scale = Vector2(2.3200011, 2.3200011)
+offset_left = 840.0
+offset_top = 496.0
+offset_right = 1064.0
+offset_bottom = 579.0
+scale = Vector2(1.6799986, 1.6799986)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jix8l")
 theme_override_font_sizes/font_size = 37
@@ -97,12 +93,42 @@ theme_override_styles/normal = ExtResource("3_glbon")
 theme_override_styles/normal_mirrored = ExtResource("3_glbon")
 theme_override_styles/pressed = ExtResource("3_glbon")
 theme_override_styles/pressed_mirrored = ExtResource("3_glbon")
-theme_override_styles/hover = ExtResource("3_glbon")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_glbon")
 theme_override_styles/disabled = ExtResource("3_glbon")
 theme_override_styles/disabled_mirrored = ExtResource("3_glbon")
 theme_override_styles/focus = ExtResource("3_glbon")
 text = "About"
 
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 661.0
+offset_right = 1064.0
+offset_bottom = 744.0
+scale = Vector2(1.6799986, 1.6799986)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jix8l")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = ExtResource("3_glbon")
+theme_override_styles/normal_mirrored = ExtResource("3_glbon")
+theme_override_styles/pressed = ExtResource("3_glbon")
+theme_override_styles/pressed_mirrored = ExtResource("3_glbon")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_glbon")
+theme_override_styles/disabled = ExtResource("3_glbon")
+theme_override_styles/disabled_mirrored = ExtResource("3_glbon")
+theme_override_styles/focus = ExtResource("3_glbon")
+text = "❌  Exit  "
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_8qtwp")
+volume_db = -4.623
+pitch_scale = 0.92
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(905, 2102)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("5_glbon")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

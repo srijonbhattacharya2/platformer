@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://drdbtan7hfgro"]
+[gd_scene load_steps=7 format=3 uid="uid://drdbtan7hfgro"]
 
 [ext_resource type="Script" uid="uid://2joip3wj05nw" path="res://Scenes/game_over.gd" id="1_jrtyg"]
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="2_35oh6"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="3_kx7r8"]
 [ext_resource type="StyleBox" uid="uid://wjxpaacbjfpp" path="res://Assets/Button Setting.tres" id="4_e2s3l"]
 [ext_resource type="AudioStream" uid="uid://d2hvsk46njsda" path="res://Scenes/Demon.mp3" id="5_nku4c"]
+[ext_resource type="AudioStream" uid="uid://s4woexhutivi" path="res://Assets/Audio/Select.mp3" id="6_jrtyg"]
 
 [node name="Game Over" type="Control"]
 layout_mode = 3
@@ -85,6 +86,11 @@ theme_override_colors/font_color = Color(0.13979697, 0.37474334, 0.99976057, 1)
 theme_override_fonts/font = ExtResource("3_kx7r8")
 theme_override_font_sizes/font_size = 100
 text = "😈  That potion was actually poision!!!  😈"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jrtyg")
+volume_db = -4.623
+pitch_scale = 0.92
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

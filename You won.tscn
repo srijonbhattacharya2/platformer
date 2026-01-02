@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm8hyhp4iuf1f"]
+[gd_scene load_steps=7 format=3 uid="uid://dm8hyhp4iuf1f"]
 
 [ext_resource type="Script" uid="uid://3nl3w7wryjqp" path="res://you_won.gd" id="1_bmqyt"]
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_rkq5x"]
 [ext_resource type="AudioStream" uid="uid://ckd0gmo47cb0a" path="res://Assets/Audio/You Won.mp3" id="2_n7l8v"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="3_bmqyt"]
 [ext_resource type="StyleBox" uid="uid://wjxpaacbjfpp" path="res://Assets/Button Setting.tres" id="5_ywktr"]
+[ext_resource type="AudioStream" uid="uid://s4woexhutivi" path="res://Assets/Audio/Select.mp3" id="6_ywktr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -57,5 +58,10 @@ theme_override_styles/disabled = ExtResource("5_ywktr")
 theme_override_styles/disabled_mirrored = ExtResource("5_ywktr")
 theme_override_styles/focus = ExtResource("5_ywktr")
 text = "🏠  Home  "
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ywktr")
+volume_db = -4.623
+pitch_scale = 0.94
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

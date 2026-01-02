@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0gk3jyfgn3tm"]
+[gd_scene load_steps=18 format=3 uid="uid://c0gk3jyfgn3tm"]
 
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_4q2eq"]
 [ext_resource type="Script" uid="uid://bjl5hfa3mvyub" path="res://about.gd" id="1_k56y8"]
 [ext_resource type="FontFile" uid="uid://buvbp6jbbtoh5" path="res://Assets/Game_Font.ttf" id="2_pp48r"]
 [ext_resource type="Texture2D" uid="uid://d2bfudew2pxcy" path="res://Assets/Pictures/Ground.png" id="4_h6umi"]
+[ext_resource type="AudioStream" uid="uid://s4woexhutivi" path="res://Assets/Audio/Select.mp3" id="5_sx25x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp48r"]
 
@@ -79,10 +80,10 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 426.0
-offset_top = 803.0
-offset_right = 625.0
-offset_bottom = 884.0
+offset_left = 392.0
+offset_top = 774.0
+offset_right = 591.0
+offset_bottom = 855.0
 scale = Vector2(1.6399996, 1.6399996)
 theme_override_colors/font_color = Color(0.37089646, 0.1861046, 1, 1)
 theme_override_fonts/font = ExtResource("2_pp48r")
@@ -107,10 +108,10 @@ texture = ExtResource("4_h6umi")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1142.0
-offset_top = 803.0
-offset_right = 1341.0
-offset_bottom = 884.0
+offset_left = 1017.0
+offset_top = 739.0
+offset_right = 1458.0
+offset_bottom = 859.0
 scale = Vector2(1.6399996, 1.6399996)
 theme_override_colors/font_color = Color(0.37089646, 0.1861046, 1, 1)
 theme_override_fonts/font = ExtResource("2_pp48r")
@@ -126,7 +127,8 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7n2fl"
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_qkww8")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_j2lv4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xdudg")
-text = "📋 Copy"
+text = "📋 Send
+Feedback"
 
 [node name="Label3" type="Label" parent="."]
 visible = false
@@ -140,6 +142,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_h6umi")
 text = "📋 Copied!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sx25x")
+volume_db = -4.623
+pitch_scale = 0.92
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://qd1tltxqdp02"]
+[gd_scene load_steps=8 format=3 uid="uid://qd1tltxqdp02"]
 
 [ext_resource type="Script" uid="uid://2joip3wj05nw" path="res://Scenes/game_over.gd" id="1_eoghk"]
 [ext_resource type="Texture2D" uid="uid://tocs3p0c4i6u" path="res://Assets/Pictures/Sky.png" id="1_ojehl"]
@@ -6,6 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://wjxpaacbjfpp" path="res://Assets/Button Setting.tres" id="3_ek8ke"]
 [ext_resource type="Texture2D" uid="uid://bp4n3obflmb3n" path="res://Assets/Pictures/Player - Lost.png" id="5_14u15"]
 [ext_resource type="AudioStream" uid="uid://23wvuix3cx2q" path="res://Assets/Audio/Game Over.mp3" id="6_j3ryr"]
+[ext_resource type="AudioStream" uid="uid://s4woexhutivi" path="res://Assets/Audio/Select.mp3" id="7_rjluv"]
 
 [node name="Game Over" type="Control"]
 layout_mode = 3
@@ -81,6 +82,11 @@ texture = ExtResource("5_14u15")
 stream = ExtResource("6_j3ryr")
 volume_db = -12.326
 autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_rjluv")
+volume_db = -4.623
+pitch_scale = 0.94
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
