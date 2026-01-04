@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://tww0hpdh6lwy"]
+[gd_scene load_steps=42 format=3 uid="uid://tww0hpdh6lwy"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_oodnk"]
 [ext_resource type="Script" uid="uid://bprm5oc17ekn2" path="res://Scripts/Player.gd" id="2_q6kiu"]
@@ -38,7 +38,7 @@ size = Vector2(102, 99.5)
 size = Vector2(5627.8774, 415.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7nbq1"]
-size = Vector2(11359, 433)
+size = Vector2(14981, 433)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
 size = Vector2(101.5, 4245.5)
@@ -51,9 +51,6 @@ size = Vector2(507.70898, 312)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iivbl"]
 radius = 183.02458
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7t8sx"]
-size = Vector2(933, 36)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hjfy"]
 radius = 48.5
@@ -86,11 +83,11 @@ position = Vector2(191, 227.25)
 shape = SubResource("RectangleShape2D_wrm1d")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(190, -72)
+position = Vector2(610, 749)
 limit_left = -1218
 limit_top = 1667
-limit_right = 20024
-limit_bottom = 2643
+limit_right = 23256
+limit_bottom = 2764
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 rotation_smoothing_enabled = true
@@ -240,7 +237,7 @@ scale = Vector2(0.44007277, 0.42761695)
 texture = ExtResource("12_2v647")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
-position = Vector2(14457.5, 2166.5)
+position = Vector2(16268.5, 2166.5)
 shape = SubResource("RectangleShape2D_7nbq1")
 debug_color = Color(6.0644747e-06, 0.5837941, 0.68323255, 0.41960785)
 
@@ -314,6 +311,31 @@ position = Vector2(20078, 2168.94)
 scale = Vector2(0.44007277, 0.42761695)
 texture = ExtResource("12_2v647")
 
+[node name="Sprite2D39" type="Sprite2D" parent="Ground"]
+position = Vector2(20749, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D40" type="Sprite2D" parent="Ground"]
+position = Vector2(21417.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D41" type="Sprite2D" parent="Ground"]
+position = Vector2(22091.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D42" type="Sprite2D" parent="Ground"]
+position = Vector2(22760.977, 2168.94)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
+[node name="Sprite2D43" type="Sprite2D" parent="Ground"]
+position = Vector2(23421.002, 2166)
+scale = Vector2(0.44007277, 0.42761695)
+texture = ExtResource("12_2v647")
+
 [node name="Boundary" type="Node2D" parent="."]
 
 [node name="Boundary" type="StaticBody2D" parent="Boundary"]
@@ -364,6 +386,12 @@ texture = ExtResource("13_xfkx7")
 z_index = -5
 position = Vector2(18543, 603.99994)
 scale = Vector2(3.0722215, 3.6863542)
+texture = ExtResource("13_xfkx7")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sky"]
+z_index = -5
+position = Vector2(21679, 603.99994)
+scale = Vector2(-3.1277783, 3.6863542)
 texture = ExtResource("13_xfkx7")
 
 [node name="Kill Zone" type="Node2D" parent="."]
@@ -452,12 +480,6 @@ texture = ExtResource("15_qxi04")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Spike 4"]
 position = Vector2(867, 2410)
 shape = SubResource("RectangleShape2D_nb51f")
-
-[node name="Empty Area" type="Area2D" parent="Kill Zone"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone/Empty Area"]
-position = Vector2(8313.5, 2901)
-shape = SubResource("RectangleShape2D_7t8sx")
 
 [node name="Rotating Spike3" type="Area2D" parent="Kill Zone"]
 position = Vector2(5088, -19)
@@ -655,7 +677,7 @@ shape = SubResource("RectangleShape2D_exi56")
 
 [node name="Flag Platform" type="StaticBody2D" parent="."]
 z_index = -1
-position = Vector2(15207, -15)
+position = Vector2(16957, -403)
 
 [node name="Sprite2D" type="Sprite2D" parent="Flag Platform"]
 position = Vector2(5358.0005, 2072)
@@ -773,7 +795,6 @@ text = "Press Up arrow key 2 times for double jump!"
 [connection signal="body_entered" from="Kill Zone/Rotating Spike" to="Kill Zone" method="_on_rotating_spike_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike2" to="Kill Zone" method="_on_rotating_spike_2_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 4" to="Kill Zone" method="_on_spike_4_body_entered"]
-[connection signal="body_entered" from="Kill Zone/Empty Area" to="Kill Zone" method="_on_empty_area_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Rotating Spike3" to="Kill Zone" method="_on_rotating_spike_3_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 5" to="Kill Zone" method="_on_spike_5_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 6" to="Kill Zone" method="_on_spike_6_body_entered"]
