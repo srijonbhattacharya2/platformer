@@ -84,3 +84,8 @@ func _on_spike_10_body_entered(body: CharacterBody2D) -> void:
 func _on_lava_3_body_entered(body: CharacterBody2D) -> void:
 	Global.health = 0
 	print(str(Global.health))
+
+
+func _on_empty_area_body_entered(body: CharacterBody2D) -> void:
+	Global.health = 0
+	print(str(Global.health))
