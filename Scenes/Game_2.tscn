@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://tww0hpdh6lwy"]
+[gd_scene load_steps=46 format=3 uid="uid://tww0hpdh6lwy"]
 
 [ext_resource type="Script" uid="uid://bey4s2dq1i3bs" path="res://Scripts/Global.gd" id="1_oodnk"]
 [ext_resource type="Script" uid="uid://bprm5oc17ekn2" path="res://Scripts/Player.gd" id="2_q6kiu"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bb5svjmlmda1j" path="res://Assets/Pictures/Spike2.png" id="19_1hjfy"]
 [ext_resource type="AudioStream" uid="uid://dfy1mf2oivupa" path="res://Assets/Audio/Game Music - 6.mp3" id="20_bved2"]
 [ext_resource type="Texture2D" uid="uid://bgg2aw00bmqeo" path="res://Assets/Pictures/Platform.png" id="21_fcg41"]
+[ext_resource type="Script" uid="uid://d3fx5817j2pbx" path="res://Scenes/platform.gd" id="21_ypwe2"]
 [ext_resource type="Script" uid="uid://ctu2jheb2peqp" path="res://Scenes/flag.gd" id="23_14fqu"]
 [ext_resource type="Script" uid="uid://cnodbbncwjlre" path="res://Scenes/heart_gain.gd" id="23_q6kiu"]
 [ext_resource type="Texture2D" uid="uid://cvd2ohi1p4y07" path="res://Assets/Pictures/Flag (2).png" id="24_sh6dq"]
@@ -76,6 +77,8 @@ stacked_shadow_0/offset = Vector2(1, 1)
 stacked_shadow_0/color = Color(0, 0, 0, 0.6039216)
 stacked_shadow_0/outline_size = 17
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ywxp6"]
+
 [node name="Game" type="Node2D"]
 
 [node name="Global" type="Node" parent="."]
@@ -92,17 +95,6 @@ texture = ExtResource("3_e27c8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(191, 227.25)
 shape = SubResource("RectangleShape2D_wrm1d")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(610, 749)
-limit_left = -1218
-limit_top = 1667
-limit_right = 23256
-limit_bottom = 2764
-position_smoothing_enabled = true
-position_smoothing_speed = 1.0
-rotation_smoothing_enabled = true
-rotation_smoothing_speed = 3.0
 
 [node name="Health" type="Node2D" parent="Player"]
 position = Vector2(192, 137)
@@ -123,6 +115,17 @@ script = ExtResource("9_ywxp6")
 [node name="3 of 3" type="Sprite2D" parent="Player/Health"]
 texture = ExtResource("10_k128n")
 script = ExtResource("11_0xvs8")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(610, 749)
+limit_left = -1218
+limit_top = 1667
+limit_right = 23256
+limit_bottom = 2764
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(3, 519)
@@ -580,7 +583,7 @@ position = Vector2(868, 2354.5)
 shape = SubResource("CapsuleShape2D_1hjfy")
 
 [node name="Spike 9" type="Area2D" parent="Kill Zone"]
-position = Vector2(15121, 9)
+position = Vector2(15186.354, 9)
 
 [node name="Sprite2D" type="Sprite2D" parent="Kill Zone/Spike 9"]
 position = Vector2(868.00073, 2354.5)
@@ -643,6 +646,7 @@ autoplay = true
 [node name="Platform" type="StaticBody2D" parent="."]
 z_index = -1
 position = Vector2(-94, 94)
+script = ExtResource("21_ypwe2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
 position = Vector2(5358.0005, 2072)
@@ -694,7 +698,7 @@ shape = SubResource("RectangleShape2D_exi56")
 
 [node name="Flag Platform" type="StaticBody2D" parent="."]
 z_index = -1
-position = Vector2(16957, -403)
+position = Vector2(16957, -70)
 
 [node name="Sprite2D" type="Sprite2D" parent="Flag Platform"]
 position = Vector2(5358.0005, 2072)
@@ -733,7 +737,7 @@ position = Vector2(87, 2415)
 shape = SubResource("CircleShape2D_e27c8")
 
 [node name="Heart loss" type="Area2D" parent="."]
-position = Vector2(7564, 0)
+position = Vector2(6933.6167, -247.61475)
 script = ExtResource("26_v3sji")
 
 [node name="Sprite2D" type="Sprite2D" parent="Heart loss"]
@@ -806,6 +810,18 @@ theme_override_font_sizes/font_size = 50
 text = "Press Up arrow key 2 times for double jump!"
 label_settings = SubResource("LabelSettings_rhger")
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4480.255, 2163.3367)
+shape = SubResource("CircleShape2D_ywxp6")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(5571.5366, 2163.3367)
+shape = SubResource("CircleShape2D_ywxp6")
+
 [connection signal="body_entered" from="Kill Zone/Spike 1" to="Kill Zone" method="_on_spike_1_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Lava" to="Kill Zone" method="_on_lava_body_entered"]
 [connection signal="body_entered" from="Kill Zone/Spike 2" to="Kill Zone" method="_on_spike_2_body_entered"]
@@ -829,3 +845,5 @@ label_settings = SubResource("LabelSettings_rhger")
 [connection signal="body_entered" from="Heart Gain" to="Heart Gain" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart loss" to="Heart loss" method="_on_body_entered"]
 [connection signal="body_entered" from="Heart loss2" to="Heart loss2" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Platform" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Platform" method="_on_area_2d_2_body_entered"]

@@ -25,9 +25,9 @@ autoplay = true
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 840.0
-offset_top = 327.0
+offset_top = 309.0
 offset_right = 1064.0
-offset_bottom = 410.0
+offset_bottom = 392.0
 scale = Vector2(1.6799986, 1.6799986)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jix8l")
@@ -82,9 +82,9 @@ texture = ExtResource("7_qe12f")
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 840.0
-offset_top = 496.0
+offset_top = 478.0
 offset_right = 1064.0
-offset_bottom = 579.0
+offset_bottom = 561.0
 scale = Vector2(1.6799986, 1.6799986)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jix8l")
@@ -102,9 +102,9 @@ text = "About"
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 840.0
-offset_top = 661.0
+offset_top = 643.0
 offset_right = 1064.0
-offset_bottom = 744.0
+offset_bottom = 726.0
 scale = Vector2(1.6799986, 1.6799986)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jix8l")
@@ -128,6 +128,26 @@ pitch_scale = 0.92
 position = Vector2(905, 2102)
 scale = Vector2(2.2, 2.2)
 texture = ExtResource("5_glbon")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 813.0
+offset_right = 1064.0
+offset_bottom = 896.0
+scale = Vector2(1.6799986, 1.6799986)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jix8l")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = ExtResource("3_glbon")
+theme_override_styles/normal_mirrored = ExtResource("3_glbon")
+theme_override_styles/pressed = ExtResource("3_glbon")
+theme_override_styles/pressed_mirrored = ExtResource("3_glbon")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_glbon")
+theme_override_styles/disabled = ExtResource("3_glbon")
+theme_override_styles/disabled_mirrored = ExtResource("3_glbon")
+theme_override_styles/focus = ExtResource("3_glbon")
+text = "  Level Selct  "
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
