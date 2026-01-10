@@ -17,3 +17,7 @@ func _on_button_3_pressed() -> void:
 	$AudioStreamPlayer2.play()
 	await get_tree().create_timer(0.3).timeout
 	get_tree().quit()
+
+
+func _on_button_mouse_entered() -> void:
+	$AudioStreamPlayer.play()

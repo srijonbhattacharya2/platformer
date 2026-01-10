@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://kxtki5usfbkm"]
+
+[ext_resource type="PackedScene" uid="uid://tww0hpdh6lwy" path="res://Scenes/Game_2.tscn" id="1_uiaec"]
+
+[node name="Game" instance=ExtResource("1_uiaec")]
+
+[node name="Lava" parent="Kill Zone" index="1"]
+position = Vector2(173.77356, 0)

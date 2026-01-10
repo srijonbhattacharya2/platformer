@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var SPEED = 10
+var SPEED = 5
 var dir = -1
 
 func _process(delta: float) -> void:

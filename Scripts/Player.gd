@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 
 	# Jump (single + double)
 	if Input.is_action_just_pressed("ui_up") and jumps_left > 0:
+		$AudioStreamPlayer.play()
 		velocity.y = JUMP_VELOCITY
 		jumps_left -= 1
 
